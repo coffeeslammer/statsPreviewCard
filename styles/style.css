@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+p,
+h1,
+h2,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    background-color: #090b1a;
+}
+
+picture img {
+    mix-blend-mode: multiply;
+    opacity: .8;
+    display: block;
+    max-width: 100%;
+}
+
+picture {
+    display: grid;
+    justify-content: center;
+    background-color: hsl(274, 64%, 55%);
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+
+.container {
+    max-width: 40.875rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    text-align: center;
+}
+
+article {
+    background-color: #1b1938;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+}
+
+h1 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+h1 span {
+    color: #aa5cdb;
+}
+
+hgroup p {
+    font-size: 0.938rem;
+    line-height: 1.563rem;
+    color: hsla(0, 0%, 100%, 0.6);
+    margin-bottom: 2rem;
+}
+
+hgroup {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+ul span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+ul {
+    font-size: 0.75rem;
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+li {
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    list-style-type: none;
+}
+
+/* -----------------------------------media start------------------------- */
+/* any size smaller then 905px and the picture shrinks but the article stops so I get the  */
+/* purple background bleeding though the bottom */
+
+@media screen and (min-width: 57.188rem) {
+    .container {
+        max-width: 72.5rem;
+    }
+
+    main {
+        display: flex;
+        flex-flow: row-reverse;
+        place-content: center;
+    }
+
+    article {
+        display: flex;
+        flex-flow: column;
+        flex-basis: 35.625rem;
+        margin: 0;
+        border-bottom-left-radius: .5rem;
+        border-top-left-radius: .5rem;
+        margin-left: 1.25rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    picture {
+        margin-left: 0;
+        margin-right: 1.25rem;
+        border-bottom-right-radius: .5rem;
+        border-top-right-radius: .5rem;
+        border-top-left-radius: 0;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    li {
+        margin: 0;
+    }
+}
